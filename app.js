@@ -18,16 +18,6 @@ for (var i = 0; i < spoilers.length; i++) {
     spoilerContent.textContent = spoiler.textContent;
     spoilerContent.style = "display: inline-block;margin: 0;padding: 0;width: 0;height: 0;opacity: 0;overflow: hidden"
 
-
-      // if(spoilerContent.classList.contains("visible")){
-      //   spoilerContent.classList.remove("visible")
-      //   spoilerContent.style = "display: inline-block;margin: 0;padding: 0;width: 0;height: 0;opacity: 0;overflow: hidden"
-      // }else {
-      //   spoilerContent.classList.add("visible")
-      //   spoilerContent.style = "color:red, transition: opacity .4s"
-      // }
-
-
   })(spoiler, spoilerContent);
 
   (function(spoiler, systemSpoiler, spoilerContent){//add a child button system adn content in spoiler class
@@ -39,17 +29,8 @@ for (var i = 0; i < spoilers.length; i++) {
 
   (function(systemSpoiler, spoilerContent){
     systemSpoiler.addEventListener("click", function(){
-
-      if(spoilerContent.classList.contains("visible")){
-        spoilerContent.classList.remove("visible")
-        spoilerContent.style = "display: inline-block;margin: 0;padding: 0;width: 0;height: 0;opacity: 0;overflow: hidden"
-      }else {
-        spoilerContent.classList.add("visible")
-        spoilerContent.style = "color:red; transition: opacity .8s"
-        systemSpoiler.classList.remove("visible")
-        systemSpoiler.style = "display: inline-block;margin: 0;padding: 0;width: 0;height: 0;opacity: 0;overflow: hidden"
-      }
-
+      spoilerContent.style = "color:red; transition: opacity .8s"
+      systemSpoiler.style = "display: inline-block;margin: 0;padding: 0;width: 0;height: 0;opacity: 0;overflow: hidden"
 
     });
   })(systemSpoiler, spoilerContent);
